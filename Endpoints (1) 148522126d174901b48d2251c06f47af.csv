@@ -1,0 +1,66 @@
+﻿Path URL,Entity,HTTP Methods,Description,Success Response,Error Response
+/api/v1/job,Job,POST,Add new Job,String: Record Created Successfully,"{  ""timeStamp"":""2023-12-20"", ""message"": ""Validation failed” }                         "
+/api/v1/job,Job,PUT,Modify Job,String: Record Modified Successfully,"{  ""timeStamp"":""2023-12-20"", ""message"": ""Validation failed” }   "
+/api/v1/job/{minsalary/{maxsalary},Job,PUT,Update min and max salary if any changes,Job,
+/api/v1/job,Job,GET,Get All Jobs,Collection of Job,
+/api/v1/job/{job_id},Job,DELETE,Delete Job by Job Id,String: Record deleted Successfully,
+/api/v1/country,Country,GET,List all Country,Collection of Country,
+/api/v1/country/{country_id},Country,GET,Search Country by Id,Country,
+/api/v1/country,Country,POST,Add new country,String: Record Created Successfully,"{""timeStamp"":""2023-12-20"", ""message"": ""Validation failed”}"
+/api/v1/country,Country,PUT,Modify the country,String: Record Modified Successfully,"{""timeStamp"":""2023-12-20"", ""message"": ""Validation failed”}"
+/api/v1/country/{country_id},Country,DELETE,Delete country by Id,String: Record deleted Successfully,
+/api/v1/employees/findfname/{firstname},Employee,GET,findByFirstName,Employee,
+/api/v1/employees/findemail/{email},Employee,GET,findByEmail,Employee,
+/api/v1/employees/findphone/{phone},Employee,GET,findByPhoneNumber,Employee,
+/api/v1/employees/ findAllEmployeeWithNoCommission,Employee,GET,findAllEmployeeWithNoCommission,Employee,
+/api/v1/employees/ findTotalCommissionIssuedToEmployee/{department_id},Employee,GET,findTotalCommissionIssued ToEmployeeByDepartment,"{ “departmentid” : 1200,
+“sum” : 23000  }",
+/api/v1/employees/listAllEmployees/{department_id},Employee,GET,listAllEmployeesByDepartment,Collection of Employees,
+/api/v1/employees/employees_departmentwise_count,Employee,GET,countAllEmployeesGroupByDepartment,"[{
+“departmentname” : “Treasury”,
+“count” : 23},
+{
+“departmentname” : “Manufacturing”,
+“count” : 34},
+……]",
+/api/v1/employees/listallmanagerdetails,Employee,GET,listAllManagerDetails,Collection of Employees,
+/api/v1/ employees /locationwisecountofemployees,Employee,GET,countAllEmployeesGroupByLocation,"{“locationid” : “10”, “count” : 23}",
+/api/v1/employees/{empid}/findmaxsalaryofjob,Employee,GET,findMaxSalaryOfJobByEmployeeId,"{“Job Title”: “Finance Manager”,
+“max salary” : 
+12000}",
+/api/v1/employees/findAllOpenPositions,Employee,GET,find All Open Positions which was not filled,Collection of Job,
+/api/v1/ employees /findAllOpenPositions/{department_id},Employee,GET,Find All Open Positions which was not filled in a particular department.,Collection of Job,
+/api/v1/employees/listallemployeebyhiredate/{from_hiredate}/{to_hiredate},Employee,GET,List All employee hired on particular date range.,Collection of Employees,
+/api/v1/employees,Employee,POST,Add new Employee,String: Record Created Successfully,"{ ""timeStamp"":""2023-12-20"", ""message"": ""Validation failed” }"
+/api/v1/employees,Employee,PUT,Modify Employee,String: Record Modified Successfully,"{ ""timeStamp"":""2023-12-20"", ""message"": ""Validation failed” }"
+/api/v1/employees/{job_id},Employee,PUT,Assign employees job using JOB ID,String: Record Modified Successfully,"{ ""timeStamp"":""2023-12-20"", ""message"": ""Validation failed” }"
+/api/v1/employees/{manager_id},Employee,PUT,Assign employee’s manager.,String: Record Modified Successfully,"{ ""timeStamp"":""2023-12-20"", ""message"": ""Validation failed” }"
+/api/v1/employees/{department_id},Employee,PUT,Assign employee’s department,String: Record Modified Successfully,"{ ""timeStamp"":""2023-12-20"", ""message"": ""Validation failed” }"
+/api/v1/employees/{department_id}/{sales_percentage},Employee,PUT,Assign employee’s department and update the percentage for sales department employees,String: Record Modified Successfully,"{ ""timeStamp"":""2023-12-20"", ""message"": ""Validation failed” }"
+/api/v1/ employees/{email},Employee,PUT,update employee email,String: Record Modified Successfully,"{ ""timeStamp"":""2023-12-20"", ""message"": ""Validation failed” }"
+/api/v1/ employees/{phonenumber},Employee,PUT,Update employee phone number,String: Record Modified Successfully,"{ ""timeStamp"":""2023-12-20"", ""message"": ""Validation failed” }"
+/api/v1/employees/{emp_id},Employee,DELETE,Delete by employee Id,String: Record Deleted Successfully,"{ ""timeStamp"":""2023-12-20"", ""message"": ""Validation failed” }"
+/api/v1/region,Region,GET,List All Region,Collection of Region,
+/api/v1/region/{region_id},Region,GET,Search Region by Id,Region,
+/api/v1/region,Region,POST,Add new Region,String: Record Created Successfully,"{""timeStamp"":""2023-12-20"", ""message"": ""Validation failed”}"
+/api/v1/region,Region,PUT,Modify the Region,String: Record Modified Successfully,"{""timeStamp"":""2023-12-20"", ""message"": ""Validation failed”}"
+/api/v1/region/{region_id},Region,DELETE,Delete Region by region Id,String: Record Deleted Successfully,
+/api/v1/location,Location,GET,List All Location,Collection of Location,
+/api/v1/location/{location_id},Location,GET,Search Location by Id,Location,
+/api/v1/location,Location,POST,Add new Location,String: Record Created Successfully,"{""timeStamp"":""2023-12-20"", ""message"": ""Validation failed”}"
+/api/v1/location,Location,PUT,Modify the Location,String: Record Modified Successfully,"{""timeStamp"":""2023-12-20"", ""message"": ""Validation failed”}"
+/api/v1/location/{location_id},Location,DELETE,Delete Location by location Id,String: Record Deleted Successfully,
+/api/v1/department,Department,POST,Add new Department,String: Record Created Successfully,"{""timeStamp"":""2023-12-20"", ""message"": ""Validation failed”}"
+/api/v1/department,Department,PUT,Modify Department,String: Record Modified Successfully,"{""timeStamp"":""2023-12-20"", ""message"": ""Validation failed”}"
+/api/v1/department/findmaxsalary/{department_id},Department,GET,Employee max salary in the department,"{  “department_name”: “Treasury”,
+    “max salary” : 12000  }",
+/api/v1/department/findminsalary/{department_id},Department,GET,Employee min salary in the department,"{  “department_name”: “Treasury”,
+    “min salary” : 300  }",
+,Department,GET,,,
+api/v1/departments/{department_id},Department,DELETE,Delete Department by department Id,String: Record Deleted Successfully,
+/api/v1/job_history/totalyearsofexperience/{emp_id},Job History,GET,findExperienceOfEmployee,"200:{“years” : 1,
+“month” : 11,
+“days” : 12}",
+/api/v1/job_history/lessthanoneyearexperience,Job History,GET,listAllEmployeesWithLessThanOneYearExperience,Collection of employees,
+/api/v1/job_history/{empid}/{startdate}/{job_id}/{department_id},Job History,POST,"Add entry in job history, if employee moves from one department to another with same or different Job Title. Also when new employees added add job history.",String: Record Created Successfully,"{""timeStamp"":""2023-12-20"", ""message"": ""Validation failed”}"
+/api/v1/job_history/{empid}/{enddate},Job History,PUT,Job History Modified,String: Record Created Successfully,"{""timeStamp"":""2023-12-20"", ""message"": ""Validation failed”}"
